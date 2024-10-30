@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">= 3.11"
+name = "Convertible"
+description = "A powerful video transcoder for Linux."
+version = "0.0.1a"
+authors = [
+  {name = "Michael Gregory", email = "michaelgregoryn@gmail.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project]
+dependencies = [
+  "python-ffmpeg",
+  "watchdog",
+  "PyGObject",
+]
+
+[project.scripts]
+convertible = "convertible:app"
